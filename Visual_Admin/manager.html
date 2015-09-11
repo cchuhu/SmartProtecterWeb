@@ -48,77 +48,124 @@
         <nav class="templatemo-left-nav">          
           <ul>
             <li><a href="service.html"><i class="fa fa-home fa-fw"></i>报修单</a></li>
-            <li><a href="#" class ="active"><i class="fa fa-bar-chart fa-fw"></i>维修人员</a></li>
-            <li><a href="user.html" ><i class="fa fa-database fa-fw"></i>业主</a></li>
-            <li><a href="advice.html"><i class="fa fa-users fa-fw"></i>反馈及评价</a></li>
+            <li><a href="#" class ="active"><i class="fa fa-users fa-fw"></i>维修人员</a></li>
+            <li><a href="user.html" ><i class="fa fa-users fa-fw"></i>业主</a></li>
+            <li><a href="advice.html"><i class="fa fa-database fa-fw"></i>反馈及评价</a></li>
+            <li><a href="data.html"><i class="fa fa-bar-chart-o fa-fw"></i>数据分析</a></li>
             <li><a href="login.html"><i class="fa fa-eject fa-fw"></i>登出</a></li>
           </ul>  
         </nav>
       </div>
-      <!-- Main content --> 
+      <!-- Main content -->
       <div class="templatemo-content col-1 light-gray-bg">
-        <div class="templatemo-top-nav-container">
-          <div class="row">
-            <nav class="templatemo-top-nav col-lg-12 col-md-12">
-              <ul class="text-uppercase">
-                <li><a href="">添加新员工</a></li>
-                <li><a href="">搜索</a></li>
+        <div class="templatemo-content-container">
+          <div class="templatemo-content-widget no-padding">
+            <div class="panel panel-default table-responsive">
+              <!--、table标签是表格-->
+              <table class="table table-striped table-bordered templatemo-user-table">
+                <thead>
+                <!--、tr指的是每一行的意思，td指的是每一列的意思-->
+                <tr>
+                  <td><a href="" class="white-text templatemo-sort-by"># <span class="caret"></span></a></td>
+                  <td><a href="" class="white-text templatemo-sort-by">First Name <span class="caret"></span></a>
+                  </td>
+                  <td><a href="" class="white-text templatemo-sort-by">Last Name <span
+                          class="caret"></span></a></td>
+                  <td><a href="" class="white-text templatemo-sort-by">User Name <span
+                          class="caret"></span></a></td>
+                  <td><a href="" class="white-text templatemo-sort-by">Email <span class="caret"></span></a>
+                  </td>
+                  <td>Edit</td>
+                  <td>Action</td>
+                  <td>Delete</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>John</td>
+                  <td>Smith</td>
+                  <td>@jS</td>
+                  <td>js@company.com</td>
+                  <td><a href="" class="templatemo-edit-btn">Edit</a></td>
+                  <td><a href="" class="templatemo-link">Action</a></td>
+                  <td><a href="" class="templatemo-link">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td>Bill</td>
+                  <td>Jones</td>
+                  <td>@bJ</td>
+                  <td>bj@company.com</td>
+                  <td><a href="" class="templatemo-edit-btn">Edit</a></td>
+                  <td><a href="" class="templatemo-link">Action</a></td>
+                  <td><a href="" class="templatemo-link">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>3.</td>
+                  <td>Mary</td>
+                  <td>James</td>
+                  <td>@mJ</td>
+                  <td>mj@company.com</td>
+                  <td><a href="" class="templatemo-edit-btn">Edit</a></td>
+                  <td><a href="" class="templatemo-link">Action</a></td>
+                  <td><a href="" class="templatemo-link">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>4.</td>
+                  <td>Steve</td>
+                  <td>Bride</td>
+                  <td>@sB</td>
+                  <td>sb@company.com</td>
+                  <td><a href="" class="templatemo-edit-btn">Edit</a></td>
+                  <td><a href="" class="templatemo-link">Action</a></td>
+                  <td><a href="" class="templatemo-link">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>5.</td>
+                  <td>Paul</td>
+                  <td>Richard</td>
+                  <td>@pR</td>
+                  <td>pr@company.com</td>
+                  <td><a href="" class="templatemo-edit-btn">Edit</a></td>
+                  <td><a href="" class="templatemo-link">Action</a></td>
+                  <td><a href="" class="templatemo-link">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>6.</td>
+                  <td>Will</td>
+                  <td>Brad</td>
+                  <td>@wb</td>
+                  <td>wb@company.com</td>
+                  <td><a href="" class="templatemo-edit-btn">Edit</a></td>
+                  <td><a href="" class="templatemo-link">Action</a></td>
+                  <td><a href="" class="templatemo-link">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>7.</td>
+                  <td>Steven</td>
+                  <td>Eric</td>
+                  <td>@sE</td>
+                  <td>se@company.com</td>
+                  <td><a href="" class="templatemo-edit-btn">Edit</a></td>
+                  <td><a href="" class="templatemo-link">Action</a></td>
+                  <td><a href="" class="templatemo-link">Delete</a></td>
+                </tr>
+                <tr>
+                  <td>8.</td>
+                  <td>Landi</td>
+                  <td>Susan</td>
+                  <td>@lS</td>
+                  <td>ls@company.com</td>
+                  <td><a href="" class="templatemo-edit-btn">Edit</a></td>
+                  <td><a href="" class="templatemo-link">Action</a></td>
+                  <td><a href="" class="templatemo-link">Delete</a></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-              </ul>  
-            </nav> 
-          </div>
-        </div>
-        <div class="templatemo-content-container">         
-          <div class="templatemo-content-widget white-bg">
-            <h2 class="margin-bottom-10">Data Visualization</h2>
-            <p>Credit goes to <a href="https://google-developers.appspot.com/chart/" target="_parent">Google Charts</a></p>
-            <div class="panel panel-default no-border">
-              <div class="panel-heading border-radius-10">
-                <h2>Gauge</h2>
-              </div>
-              <div class="panel-body">
-                <div class="templatemo-flex-row flex-content-row margin-bottom-30">
-                  <div class="col-1">
-                    <div id="gauge_div" class="templatemo-chart"></div>
-                    <h3 class="text-center margin-bottom-5">Computer Resources</h3>
-                    <p class="text-center">Curabitur</p>              
-                  </div>              
-                </div>     
-              </div>
-            </div>            
-            <div class="panel panel-default no-border">
-              <div class="panel-heading border-radius-10">
-                <h2>Timeline</h2>
-              </div>
-              <div class="panel-body">
-                <div class="templatemo-flex-row flex-content-row">
-                  <div class="col-1">
-                    <div id="timeline_div" class="templatemo-chart"></div>
-                    <h3 class="text-center margin-bottom-5">Conference Schedule</h3>
-                    <p class="text-center">Lorem Ipsum</p>                
-                  </div>              
-                </div>
-              </div> 
-            </div>
-            <div class="panel panel-default no-border">
-              <div class="panel-heading border-radius-10">
-                <h2>Area Chart</h2>
-              </div>
-              <div class="panel-body">
-                <div class="templatemo-flex-row flex-content-row">
-                  <div class="col-1">
-                    <div id="area_chart_div" class="templatemo-chart"></div>
-                    <h3 class="text-center margin-bottom-5">Company Performance</h3>
-                    <p class="text-center">Fusce mi lacus</p>                
-                  </div>              
-                </div>
-              </div> 
-            </div>
-          </div>
-          <footer class="text-right">
-            <p>Copyright &copy; 2084 Company Name 
-            | More Templates <a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
-          </footer>         
         </div>
       </div>
     </div>
