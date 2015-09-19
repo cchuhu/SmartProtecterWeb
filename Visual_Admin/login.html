@@ -1,53 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">  
-	    <title>Visual Admin - Login</title>
-        <meta name="description" content="">
-        <meta name="author" content="templatemo">
-        
-	    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
-	    <link href="css/font-awesome.min.css" rel="stylesheet">
-	    <link href="css/bootstrap.min.css" rel="stylesheet">
-	    <link href="css/templatemo-style.css" rel="stylesheet">
-	    
-	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	    <!--[if lt IE 9]>
-	      <script src="js/html5shiv.min.js"></script>
-	      <script src="js/respond.min.js"></script>
-	    <![endif]-->
-	</head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visual Admin - Login</title>
+    <meta name="description" content="">
+    <meta name="author" content="templatemo">
 
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-style.css" rel="stylesheet">
 
-	<body class="light-gray-bg"  >
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <![endif]-->
+</head>
+<script src="js/jquery.js"></script>
 
-		<div class="templatemo-content-widget templatemo-login-widget white-bg">
-			<header class="text-center">
+<body class="light-gray-bg">
 
-	          <h1>Smart Protector</h1>
-	        </header>
-	        <form action="service.html" class="templatemo-login-form">
-	        	<div class="form-group">
-	        		<div class="input-group">
-		        		<div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>	        		
-		              	<input type="text" class="form-control" placeholder="请输入管理员账号">
-		          	</div>	
-	        	</div>
-	        	<div class="form-group">
-	        		<div class="input-group">
-		        		<div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>	        		
-		              	<input type="password" class="form-control" placeholder="请输入密码">
-		          	</div>	
-	        	</div>	          	
+<div class="templatemo-content-widget templatemo-login-widget white-bg">
+    <header class="text-center">
 
-				<div class="form-group">
-					<button type="submit" class="templatemo-blue-button width-100">登陆</button>
-				</div>
-	        </form>
-		</div>
+        <h1>Smart Protector</h1>
+    </header>
 
-	</body>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
+                <input type="text" id="acc" class="form-control" placeholder="请输入管理员账号">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>
+                <input type="password" id="pass" class="form-control" placeholder="请输入密码">
+            </div>
+        </div>
+        <!--获取账号和密码并且post的JS-->
+        <script>
+            function login() {
+                var acc = document.getElementById("acc");
+                var pass = document.getElementById("pass");
+                $.ajax({
+                    url: '../../web/admin.php',
+                    type: 'post',
+                    data: {"admin": acc.value, "password": pass.value},
+
+                    async: true, //默认为true 异步
+
+                    success: function (data) {
+                        if (data == 0) {
+
+                            window.location.href = "service.html"
+                        }
+                        else {
+                            alert('登录失败');
+                        }
+
+                    }
+                });
+
+            }
+        </script>
+        <div class="form-group">
+            <button type="submit" class="templatemo-blue-button width-100"
+                    onclick="javascript:login()">登陆
+            </button>
+        </div>
+
+</div>
+
+</body>
 </html>
